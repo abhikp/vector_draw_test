@@ -34,14 +34,14 @@ class ViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
-        if let touch = touches.first as? UITouch {
+        if let touch = touches.first as UITouch? {
             lastPoint = touch.location(in: self.view)
         }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
-        if let touch = touches.first as? UITouch {
+        if let touch = touches.first as UITouch? {
             let currentPoint = touch.location(in: view)
             drawLine(currentPoint)
         }
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
-        if let touch = touches.first as? UITouch {
+        if let touch = touches.first as UITouch? {
             let currentPoint = touch.location(in: view)
             drawLine(currentPoint)
             lastShape = nil
