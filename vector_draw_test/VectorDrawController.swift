@@ -86,5 +86,9 @@ class VectorDrawController: UIViewController {
             print("Portrait")
         }
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
