@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let shape = Shape(form: line, stroke: Stroke(fill: Color(val: 0xff9e4f), width: 2))
     
         if let macawView = view as? MacawView {
-            macawView.node = shape
+            group.contents.append(shape)
             lastShape = shape
             print("addedShape")
         }
@@ -38,8 +38,18 @@ class ViewController: UIViewController {
             lastPoint = touch.location(in: self.view)
         }
     }
-    
+
+    /*
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        swiped = true
+        if let touch = touches.first as? UITouch {
+            let currentPoint = touch.location(in: view)
+            drawLine(currentPoint)
+        }
+    }
+     */
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first as? UITouch {
             let currentPoint = touch.location(in: view)
