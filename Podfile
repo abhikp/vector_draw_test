@@ -5,5 +5,6 @@ target 'vector_draw_test' do
   use_frameworks!
 
   # Pods for vector_draw_test
-  pod "Macaw", '0.9.1'
+  pod 'Macaw', '0.9.1'
+  pod 'PureLayout', '3.0.2'
 end

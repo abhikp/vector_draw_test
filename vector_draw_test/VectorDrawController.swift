@@ -9,7 +9,7 @@
 import UIKit
 import Macaw
 
-class ViewController: UIViewController {
+class VectorDrawController: UIViewController {
     var lastPoint = CGPoint.zero
     var swiped = false
     var group = Group()
@@ -56,6 +56,10 @@ class ViewController: UIViewController {
         }
     }
 
+    override func loadView() {
+        self.view = VectorDrawView(frame: CGRect.zero)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -72,6 +76,15 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            print("Landscape")
+        } else {
+            print("Portrait")
+        }
     }
 }
 

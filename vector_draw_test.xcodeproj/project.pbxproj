@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4A367D11ACDD546106BD58B5 /* Pods_vector_draw_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C6549644083BE3617960E /* Pods_vector_draw_test.framework */; };
-		9851A30F20CD89050001DA1E /* VectorDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9851A30E20CD89050001DA1E /* VectorDrawView.swift */; };
+		980BD1A620CDBE12005CDE13 /* VectorDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BD1A520CDBE12005CDE13 /* VectorDrawView.swift */; };
 		98926ECC20CD86A900CDDAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98926ECB20CD86A900CDDAA5 /* AppDelegate.swift */; };
-		98926ECE20CD86A900CDDAA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98926ECD20CD86A900CDDAA5 /* ViewController.swift */; };
-		98926ED120CD86A900CDDAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98926ECF20CD86A900CDDAA5 /* Main.storyboard */; };
+		98926ECE20CD86A900CDDAA5 /* VectorDrawController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98926ECD20CD86A900CDDAA5 /* VectorDrawController.swift */; };
 		98926ED320CD86A900CDDAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98926ED220CD86A900CDDAA5 /* Assets.xcassets */; };
 		98926ED620CD86A900CDDAA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98926ED420CD86A900CDDAA5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9851A30E20CD89050001DA1E /* VectorDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VectorDrawView.swift; path = /Users/abhik/Development/ios/vector_draw_test/vector_draw_test/VectorDrawView.swift; sourceTree = "<absolute>"; };
+		980BD1A520CDBE12005CDE13 /* VectorDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDrawView.swift; sourceTree = "<group>"; };
 		98926EC820CD86A900CDDAA5 /* vector_draw_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vector_draw_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98926ECB20CD86A900CDDAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		98926ECD20CD86A900CDDAA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		98926ED020CD86A900CDDAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98926ECD20CD86A900CDDAA5 /* VectorDrawController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDrawController.swift; sourceTree = "<group>"; };
 		98926ED220CD86A900CDDAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98926ED520CD86A900CDDAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98926ED720CD86A900CDDAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,10 +78,9 @@
 		98926ECA20CD86A900CDDAA5 /* vector_draw_test */ = {
 			isa = PBXGroup;
 			children = (
-				9851A30E20CD89050001DA1E /* VectorDrawView.swift */,
+				980BD1A520CDBE12005CDE13 /* VectorDrawView.swift */,
 				98926ECB20CD86A900CDDAA5 /* AppDelegate.swift */,
-				98926ECD20CD86A900CDDAA5 /* ViewController.swift */,
-				98926ECF20CD86A900CDDAA5 /* Main.storyboard */,
+				98926ECD20CD86A900CDDAA5 /* VectorDrawController.swift */,
 				98926ED220CD86A900CDDAA5 /* Assets.xcassets */,
 				98926ED420CD86A900CDDAA5 /* LaunchScreen.storyboard */,
 				98926ED720CD86A900CDDAA5 /* Info.plist */,
@@ -153,7 +150,6 @@
 			files = (
 				98926ED620CD86A900CDDAA5 /* LaunchScreen.storyboard in Resources */,
 				98926ED320CD86A900CDDAA5 /* Assets.xcassets in Resources */,
-				98926ED120CD86A900CDDAA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,11 +182,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-vector_draw_test/Pods-vector_draw_test-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Macaw.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,23 +203,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98926ECE20CD86A900CDDAA5 /* ViewController.swift in Sources */,
-				9851A30F20CD89050001DA1E /* VectorDrawView.swift in Sources */,
+				98926ECE20CD86A900CDDAA5 /* VectorDrawController.swift in Sources */,
 				98926ECC20CD86A900CDDAA5 /* AppDelegate.swift in Sources */,
+				980BD1A620CDBE12005CDE13 /* VectorDrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		98926ECF20CD86A900CDDAA5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98926ED020CD86A900CDDAA5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		98926ED420CD86A900CDDAA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

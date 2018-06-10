@@ -1,20 +1,24 @@
 PODS:
   - Macaw (0.9.1):
     - SWXMLHash
+  - PureLayout (3.0.2)
   - SWXMLHash (4.7.0)
 
 DEPENDENCIES:
   - Macaw (= 0.9.1)
+  - PureLayout (= 3.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Macaw
+    - PureLayout
     - SWXMLHash
 
 SPEC CHECKSUMS:
   Macaw: 8b13bb7ae2f527b3c7b2787988bbc5461a1c66e3
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SWXMLHash: f4522438189f72b41e39676d19469a8969d60dd1
 
-PODFILE CHECKSUM: 6936a2654878df2da58412993b226c569e72df2e
+PODFILE CHECKSUM: 44710ea28f8940376b1b961435878d424a57066a
 
 COCOAPODS: 1.5.3
