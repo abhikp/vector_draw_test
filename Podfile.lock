@@ -1,0 +1,20 @@
+PODS:
+  - Macaw (0.9.1):
+    - SWXMLHash
+  - SWXMLHash (4.7.0)
+
+DEPENDENCIES:
+  - Macaw (= 0.9.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Macaw
+    - SWXMLHash
+
+SPEC CHECKSUMS:
+  Macaw: 8b13bb7ae2f527b3c7b2787988bbc5461a1c66e3
+  SWXMLHash: f4522438189f72b41e39676d19469a8969d60dd1
+
+PODFILE CHECKSUM: 6936a2654878df2da58412993b226c569e72df2e
+
+COCOAPODS: 1.5.3
