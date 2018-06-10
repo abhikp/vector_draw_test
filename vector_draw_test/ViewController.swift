@@ -23,12 +23,12 @@ class ViewController: UIViewController {
             x2: Double(currentPoint.x),
             y2: Double(currentPoint.y)
         )
-        let shape = Shape(form: line, stroke: Stroke(fill: Color(val: 0xff9e4f), width: 2))
-    
-        if let macawView = view as? MacawView {
-            group.contents.append(shape)
-            lastShape = shape
-            print("addedShape")
+       
+        if lastShape == nil {
+            lastShape = Shape(form: line, stroke: Stroke(fill: Color(val: 0xff9e4f), width: 2))
+            group.contents.append(lastShape!)
+        } else {
+            lastShape?.form = line
         }
     }
     
@@ -39,7 +39,6 @@ class ViewController: UIViewController {
         }
     }
 
-    /*
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first as? UITouch {
@@ -47,13 +46,13 @@ class ViewController: UIViewController {
             drawLine(currentPoint)
         }
     }
-     */
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first as? UITouch {
             let currentPoint = touch.location(in: view)
             drawLine(currentPoint)
+            lastShape = nil
         }
     }
 
