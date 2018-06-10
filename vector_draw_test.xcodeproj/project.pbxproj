@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A367D11ACDD546106BD58B5 /* Pods_vector_draw_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0C6549644083BE3617960E /* Pods_vector_draw_test.framework */; };
 		980BD1A620CDBE12005CDE13 /* VectorDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980BD1A520CDBE12005CDE13 /* VectorDrawView.swift */; };
+		9880B1CE20CDCFED00E8E405 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9880B1CD20CDCFED00E8E405 /* CanvasView.swift */; };
 		98926ECC20CD86A900CDDAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98926ECB20CD86A900CDDAA5 /* AppDelegate.swift */; };
 		98926ECE20CD86A900CDDAA5 /* VectorDrawController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98926ECD20CD86A900CDDAA5 /* VectorDrawController.swift */; };
 		98926ED320CD86A900CDDAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98926ED220CD86A900CDDAA5 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		980BD1A520CDBE12005CDE13 /* VectorDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDrawView.swift; sourceTree = "<group>"; };
+		9880B1CD20CDCFED00E8E405 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		98926EC820CD86A900CDDAA5 /* vector_draw_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vector_draw_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98926ECB20CD86A900CDDAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98926ECD20CD86A900CDDAA5 /* VectorDrawController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorDrawController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				980BD1A520CDBE12005CDE13 /* VectorDrawView.swift */,
+				9880B1CD20CDCFED00E8E405 /* CanvasView.swift */,
 				98926ECB20CD86A900CDDAA5 /* AppDelegate.swift */,
 				98926ECD20CD86A900CDDAA5 /* VectorDrawController.swift */,
 				98926ED220CD86A900CDDAA5 /* Assets.xcassets */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98926ECE20CD86A900CDDAA5 /* VectorDrawController.swift in Sources */,
+				9880B1CE20CDCFED00E8E405 /* CanvasView.swift in Sources */,
 				98926ECC20CD86A900CDDAA5 /* AppDelegate.swift in Sources */,
 				980BD1A620CDBE12005CDE13 /* VectorDrawView.swift in Sources */,
 			);

@@ -5,18 +5,25 @@
 //  Created by Abhik Pramanik on 6/10/18.
 //
 
-import Foundation
-import Macaw
+import UIKit
+import PureLayout
 
-class VectorDrawView: MacawView {
+class VectorDrawView: UIView {
+    var canvasView: CanvasView!
+    let screenSize = UIScreen.main.bounds
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.white
+
+        canvasView = CanvasView(frame: CGRect.zero)
+        canvasView.autoSetDimension(.height, toSize: screenSize.height)
+        canvasView.autoSetDimension(.width, toSize: screenSize.width)
+        
+        self.addSubview(canvasView)
     }
     
     required init?(coder aDecoder: NSCoder) {
         // Do nothing for now
-        let group = Group()
-        super.init(node: group, coder: aDecoder)
+        super.init(coder: aDecoder)
     }
 }

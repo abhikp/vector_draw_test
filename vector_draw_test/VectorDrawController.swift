@@ -62,10 +62,10 @@ class VectorDrawController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        if let macawView = view as? MacawView {
+      
+        if let vectorDrawView = view as? VectorDrawView {
             group = loadScene()
-            macawView.node = group
+            vectorDrawView.canvasView.node = group
         }
     }
     
@@ -85,10 +85,6 @@ class VectorDrawController: UIViewController {
         } else {
             print("Portrait")
         }
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
 }
 
