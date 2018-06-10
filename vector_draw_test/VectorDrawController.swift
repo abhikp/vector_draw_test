@@ -14,7 +14,16 @@ class VectorDrawController: UIViewController {
     var swiped = false
     var group = Group()
     var lastShape: Shape?
-
+    var canvasView: CanvasView? {
+        if let vectorDrawView = view as? VectorDrawView {
+            print("here")
+            return vectorDrawView.canvasView
+        }
+        
+        print("here")
+        return nil
+    }
+    
     func drawLine(_ currentPoint: CGPoint) {
         print("LastPoint: \(lastPoint), currentPoint: \(currentPoint)")
         let line = Line(
@@ -35,14 +44,14 @@ class VectorDrawController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = false
         if let touch = touches.first as UITouch? {
-            lastPoint = touch.location(in: self.view)
+            lastPoint = touch.location(in: canvasView)
         }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first as UITouch? {
-            let currentPoint = touch.location(in: view)
+            let currentPoint = touch.location(in: canvasView)
             drawLine(currentPoint)
         }
     }
@@ -50,7 +59,7 @@ class VectorDrawController: UIViewController {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         swiped = true
         if let touch = touches.first as UITouch? {
-            let currentPoint = touch.location(in: view)
+            let currentPoint = touch.location(in: canvasView)
             drawLine(currentPoint)
             lastShape = nil
         }
@@ -66,6 +75,15 @@ class VectorDrawController: UIViewController {
         if let vectorDrawView = view as? VectorDrawView {
             group = loadScene()
             vectorDrawView.canvasView.node = group
+        
+            vectorDrawView.buttonView.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        }
+    }
+    
+    @objc func buttonAction(sender: UIButton!) {
+        if let vectorDrawView = view as? VectorDrawView {
+            print("rotating canvas view")
+            canvasView!.transform = canvasView!.transform.rotated(by: CGFloat(45 * Double.pi / 180))
         }
     }
     
